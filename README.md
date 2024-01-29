@@ -13,7 +13,7 @@
 - Android Jetpack
   
 
-#### Light Theme
+### Light Theme
 
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/SaraSallah/Posts-Task/assets/93276124/305c5f77-3409-472c-8923-8b275786a554" alt="home" width="25%">
