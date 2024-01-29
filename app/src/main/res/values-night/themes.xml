@@ -1,7 +1,15 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.PostsTask" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:statusBarColor">@color/primary_100</item>
+        <item name="android:colorBackground">@color/black_87</item>
+    </style>
+
+    <style name="cardView" parent="Base.CardView">
+        <item name="cardBackgroundColor">@color/card_background_dark</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardCornerRadius">@dimen/space_4</item>
     </style>
 </resources>
