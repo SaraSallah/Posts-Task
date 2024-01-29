@@ -36,6 +36,7 @@
                     android:layout_height="65dp"
                     android:layout_marginStart="@dimen/space_16"
                     android:layout_marginTop="@dimen/space_16"
+                    android:layout_marginVertical="@dimen/space_8"
                     android:gravity="center"
                     android:text="@{viewModel.state.post.userId.toString()}"
                     android:textAlignment="center"

@@ -1,7 +1,7 @@
 package com.example.posts_task.presentation.post_details
 
 import androidx.lifecycle.SavedStateHandle
-import com.example.posts_task.domain.usecase.getPostDetailsUseCase
+import com.example.posts_task.domain.usecase.GetPostDetailsUseCase
 import com.example.posts_task.presentation.base.BaseViewModel
 import com.example.posts_task.presentation.home.toPostUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -11,7 +11,7 @@ import javax.inject.Inject
 @HiltViewModel
 class PostDetailsViewModel
 @Inject constructor(
-    private val getPostDetailsUseCase: getPostDetailsUseCase,
+    private val getPostDetailsUseCase: GetPostDetailsUseCase,
     savedStateHandle: SavedStateHandle,
 ) : BaseViewModel<PostDetailsUiState, Int>(PostDetailsUiState()) {
     override val TAG: String = this::class.java.simpleName

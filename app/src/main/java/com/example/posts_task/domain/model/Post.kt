@@ -1,4 +1,4 @@
-package com.example.posts_task.domain
+package com.example.posts_task.domain.model
 
 data class Post(
     val id: Int,
