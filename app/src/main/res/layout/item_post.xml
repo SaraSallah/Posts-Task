@@ -14,7 +14,7 @@
     </data>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="wrap_content"
         style="@style/cardView"
         android:onClick="@{()-> listener.onClickPost(item.id)}"
         android:layout_margin="@dimen/space_8">
@@ -29,7 +29,7 @@
                 android:layout_marginStart="@dimen/space_16"
                 android:layout_marginTop="@dimen/space_16"
                 android:gravity="center"
-                android:text="@{item.userId}"
+                android:text="@{item.userId.toString()}"
                 android:textAlignment="center"
                 android:textSize="@dimen/text_32"
                 app:layout_constraintStart_toStartOf="parent"
@@ -58,6 +58,9 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/text_24"
                 android:gravity="start"
+                android:layout_marginVertical="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_16"
+                android:text="@{item.body}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/post_title"
                 android:ellipsize="end"

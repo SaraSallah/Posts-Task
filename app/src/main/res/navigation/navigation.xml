@@ -9,5 +9,23 @@
         android:id="@+id/homeFragment"
         tools:layout="@layout/fragment_home"
         android:name="com.example.posts_task.presentation.home.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_postDetailsFragment"
+            app:destination="@id/postDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postDetailsFragment"
+        tools:layout="@layout/fragment_post_details"
+        android:name="com.example.posts_task.presentation.post_details.PostDetailsFragment"
+        android:label="PostDetailsFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/slide_in_left"
+        app:popExitAnim="@android:anim/slide_out_right">
+
+        <argument
+            android:name="postId"
+            app:argType="integer" />
+    </fragment>
 </navigation>

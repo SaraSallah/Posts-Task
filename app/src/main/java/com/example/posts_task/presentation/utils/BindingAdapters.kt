@@ -27,3 +27,14 @@ fun showWhenLoading(view: View, state: Boolean) {
         view.visibility = View.GONE
 }
 
+@BindingAdapter("app:hideIfLoading")
+fun hideIfLoading(view: View, condition: Boolean) {
+    view.isVisible = !condition
+}
+
+@BindingAdapter(value = ["app:hideWhenError"])
+fun hideWhenError(view: View, condition: Boolean) {
+    view.isVisible = !condition
+}
+
+

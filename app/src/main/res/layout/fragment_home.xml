@@ -21,7 +21,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/space_16"
             android:drawablePadding="@dimen/space_16"
-
             android:text="Welcome Back!"
             android:textSize="@dimen/text_24"
             android:drawableEnd="@drawable/ic_hand"
@@ -32,6 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:clipToPadding="false"
+            android:layout_marginTop="@dimen/space_8"
             app:items="@{viewModel.state.posts}"
             app:showIfNotEmpty="@{viewModel.state.posts}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

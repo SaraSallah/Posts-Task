@@ -10,7 +10,7 @@ interface PostsServices {
     @GET("/posts")
     suspend fun getAllPosts():Response<Posts>
 
-    @GET("/posts/id")
+    @GET("/posts/{id}")
     suspend fun getPostDetails(@Path("id") id :Int):Response<Post>
 
 }
