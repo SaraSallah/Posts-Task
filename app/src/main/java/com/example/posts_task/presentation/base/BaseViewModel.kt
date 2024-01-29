@@ -1,9 +1,9 @@
-package com.example.posts_task.ui.base
+package com.example.posts_task.presentation.base
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.posts_task.ui.utils.EventHandler
+import com.example.posts_task.presentation.utils.EventHandler
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow

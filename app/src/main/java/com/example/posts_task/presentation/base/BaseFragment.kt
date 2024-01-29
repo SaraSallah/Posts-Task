@@ -1,4 +1,4 @@
-package com.example.posts_task.ui.base
+package com.example.posts_task.presentation.base
 
 import android.os.Bundle
 import android.util.Log
