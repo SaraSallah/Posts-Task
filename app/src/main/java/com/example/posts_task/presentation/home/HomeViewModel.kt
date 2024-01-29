@@ -1,7 +1,7 @@
 package com.example.posts_task.presentation.home
 
 import androidx.lifecycle.viewModelScope
-import com.example.posts_task.data.repository.PostsRepository
+import com.example.posts_task.domain.usecase.getAllPostsUseCase
 import com.example.posts_task.presentation.base.BaseViewModel
 import com.example.posts_task.presentation.post_details.PostUiState
 import com.example.posts_task.presentation.utils.EventHandler
@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val postsRepository: PostsRepository,
+    private val getAllPostsUseCase: getAllPostsUseCase,
 ) : BaseViewModel<HomeUiState, Int>(HomeUiState()),PostInterActionListener {
     override val TAG: String = this::class.java.simpleName
 
@@ -23,7 +23,7 @@ class HomeViewModel @Inject constructor(
     fun getAllPosts() {
         _state.update { it.copy(isLoading = true, isError = false) }
         tryToExecute(
-            { postsRepository.getAllPosts().map { it.toPostUiState() } },
+            { getAllPostsUseCase.invoke().map { it.toPostUiState() } },
             ::onGetAllPostsSuccess,
             ::onGetAllPostsError
         )

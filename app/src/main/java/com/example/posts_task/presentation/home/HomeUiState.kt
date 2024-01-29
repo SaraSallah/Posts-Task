@@ -1,6 +1,6 @@
 package com.example.posts_task.presentation.home
 
-import com.example.posts_task.data.remote.model.Post
+import com.example.posts_task.domain.Post
 import com.example.posts_task.presentation.post_details.PostUiState
 
 data class HomeUiState(
